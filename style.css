@@ -1,0 +1,26 @@
+/* 
+    sass compailer: sass example.scss example.css --watch 
+    Bu buyruq sass da yozilgan kodni avto css ga aylantirib turadi
+*/
+h1 {
+  font-size: 55px;
+  color: red;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+nav li {
+  list-style: none;
+  font-size: 18px;
+  color: red;
+}
+nav a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
