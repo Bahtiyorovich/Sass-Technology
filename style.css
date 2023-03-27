@@ -1,26 +1,17 @@
-/* 
-    sass compailer: sass example.scss example.css --watch 
-    Bu buyruq sass da yozilgan kodni avto css ga aylantirib turadi
-*/
-h1 {
-  font-size: 55px;
-  color: red;
-}
+/* Error: @use rules must be written before any other rules.
+ *    ,
+ * 82 | @use "sass:list";
+ *    | ^^^^^^^^^^^^^^^^
+ *    '
+ *   style.scss 82:1  root stylesheet */
 
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 500px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: @use rules must be written before any other rules.\a    \2577 \a 82 \2502  @use "sass:list";\d\a    \2502  ^^^^^^^^^^^^^^^^\a    \2575 \a   style.scss 82:1  root stylesheet';
 }
-nav li {
-  list-style: none;
-  font-size: 18px;
-  color: red;
-}
-nav a {
-  text-decoration: none;
-}
-
-/*# sourceMappingURL=style.css.map */

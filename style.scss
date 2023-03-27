@@ -38,15 +38,76 @@ nav {
 
 // Xossalar
 
+.properties {
+    font: {
+        family: sans-serif;
+        weight: 700;
+        size: 50px;
+    }
+    color: red;
+
+    margin: auto {
+        bottom: 10px;
+        top: 5px;
+    }
+}
 
 
+// o'zgaruvchilar
+
+$primary-color: teal;
+$shadow: 0 0 5px rgb(0,0,0,0.3);
+$container-width: 40%;
+.variable {
+    h3 {
+        font: {
+            size:50px;
+            weight: 500;
+            family: sans-serif;
+        }
+
+        color: $primary-color;
+        text-shadow: $shadow;
+    }
+
+    width: $container-width;
+    margin-left: 30px;
+    box-shadow: $shadow;
+    padding: 15px 20px;
+    
+}
+
+// Sass at List technology
+// list metodlaridan foydalanish
+@use "sass:list"; 
+
+// ro'yxat elementlaridan foydalanish
+@debug list.nth(10px 16px 18px, 2);
+// @debug list.nth([line1, line2, line3], -1);
+
+// ro'yxatga element qo'shish
+@debug append(14px 16px 18px, 25px);
+@debug append([col1-line1], col1-line2);
+
+// ro'yxat elementlarini index raqami bo'yicha  qidirish
+// eslatma: sass da ro'yhat elementlari tartib raqami 1 dan boshlanadi:
+
+@debug list.index(17px solid red, solid); //  natija: (2)
+@debug list.index(16px dashed teal, teal); // natija: 3 yoki -1
+
+$font-families: sans-serif, Helvetica, Arial;
+$bg-color: rgb(0,0,0,0.3);
+$border: 2px;
+$border-type: solid;
+
+nav {
+    font-family: $font-families;
+    background-color: $bg-color;
+    border: $border $border-type $bg-color;
+}
 
 
+// Sass da Map technology
 
-
-
-
-
-
-
+// sass map bu - kalit qiymat ko'rinishida element saqlash
 
