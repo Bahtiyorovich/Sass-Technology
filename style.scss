@@ -1,9 +1,10 @@
+$shadow: 0 0 5px rgb(0,0,0,0.3);
 // Navbar
 .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 0 5px rgb(0,0,0,0.3);
+    box-shadow: $shadow;
     padding: 10px 30px;
     .left {
         width:500px;
@@ -33,25 +34,49 @@
 
 
 // container
-
 .container {
-    width: 50%;
-    height: 70vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 5px rgb(0,0,0,0.3);
-    margin: auto {
-        top: 50px;
-        left: 400px;
+    align-items:center;
+    justify-content:center;
+    .content-menu {
+        flex-grow: 3;
+        flex-flow: column wrap;
+        height: 90vh;
+        margin: 50px;
+        padding: 20px;
+        overflow: auto;
+        box-shadow: $shadow;
+        .card {
+            width:95%;
+            height: 200px;
+            box-shadow: $shadow;
+            padding: 2px;
+            border-radius: 5px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
-    font: {
-        size: 70px;
-        text-shadow: 0 0 5px rgb(0,0,0,0.3);
-    }
-
-    img {
-        width:90%;
-        max-height: 70vh;
+    .content-item {
+        height: 90vh;
+        display: flex;
+        flex-grow: 8;
+        align-items: center;
+        justify-content:space-around;
+        box-shadow: $shadow;
+        margin: auto {
+            top: 50px;
+            // left: 400px;
+        }
+        font: {
+            size: 70px;
+            text-shadow: $shadow;
+        }
+    
+        img {
+            width:100%;
+            max-height: 100%;
+        }
     }
 }
