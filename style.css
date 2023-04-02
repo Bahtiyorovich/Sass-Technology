@@ -1,17 +1,49 @@
-/* Error: @use rules must be written before any other rules.
- *    ,
- * 82 | @use "sass:list";
- *    | ^^^^^^^^^^^^^^^^
- *    '
- *   style.scss 82:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: @use rules must be written before any other rules.\a    \2577 \a 82 \2502  @use "sass:list";\d\a    \2502  ^^^^^^^^^^^^^^^^\a    \2575 \a   style.scss 82:1  root stylesheet';
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px 30px;
 }
+.content .left {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.content .right {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.content li {
+  list-style: none;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+.content li a {
+  text-decoration: none;
+}
+
+.container {
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  margin-top: 50px;
+  margin-left: 400px;
+  font-size: 70px;
+  font-text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.container img {
+  width: 90%;
+  max-height: 70vh;
+}
+
+/*# sourceMappingURL=style.css.map */

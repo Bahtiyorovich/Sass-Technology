@@ -1,113 +1,57 @@
-/* 
-    sass compailer: sass example.scss example.css --watch 
-    Bu buyruq sass da yozilgan kodni avto css ga aylantirib turadi
-*/
-
-// selectors - bu css qoidalari asosida ishlaydigan scss kodi
-
-h1 {
-    font-size: 55px;
-    color: red;
-}
-
-
-// Nesting qoidasi
-
-nav {
-
-    ul {
+// Navbar
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgb(0,0,0,0.3);
+    padding: 10px 30px;
+    .left {
+        width:500px;
+        display: flex;
+        align-items:center;
+        justify-content: space-around;
+    }
+    .right {
+        width:200px;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 500px;
-        border-bottom: 1px solid rgb(0,0,0, 0.2);
     }
-
     li {
         list-style: none;
-        font-size: 18px;
-        color: red;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-
-}
-
-// Xossalar
-
-.properties {
-    font: {
-        family: sans-serif;
-        weight: 700;
-        size: 50px;
-    }
-    color: red;
-
-    margin: auto {
-        bottom: 10px;
-        top: 5px;
-    }
-}
-
-
-// o'zgaruvchilar
-
-$primary-color: teal;
-$shadow: 0 0 5px rgb(0,0,0,0.3);
-$container-width: 40%;
-.variable {
-    h3 {
+        letter-spacing: 1px;
         font: {
-            size:50px;
+            size: 18px;
             weight: 500;
-            family: sans-serif;
+            family: sans-serif; 
         }
+        a {
+            text-decoration: none;
+        }
+    }
+}
 
-        color: $primary-color;
-        text-shadow: $shadow;
+
+// container
+
+.container {
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgb(0,0,0,0.3);
+    margin: auto {
+        top: 50px;
+        left: 400px;
+    }
+    font: {
+        size: 70px;
+        text-shadow: 0 0 5px rgb(0,0,0,0.3);
     }
 
-    width: $container-width;
-    margin-left: 30px;
-    box-shadow: $shadow;
-    padding: 15px 20px;
-    
+    img {
+        width:90%;
+        max-height: 70vh;
+    }
 }
-
-// Sass at List technology
-// list metodlaridan foydalanish
-@use "sass:list"; 
-
-// ro'yxat elementlaridan foydalanish
-@debug list.nth(10px 16px 18px, 2);
-// @debug list.nth([line1, line2, line3], -1);
-
-// ro'yxatga element qo'shish
-@debug append(14px 16px 18px, 25px);
-@debug append([col1-line1], col1-line2);
-
-// ro'yxat elementlarini index raqami bo'yicha  qidirish
-// eslatma: sass da ro'yhat elementlari tartib raqami 1 dan boshlanadi:
-
-@debug list.index(17px solid red, solid); //  natija: (2)
-@debug list.index(16px dashed teal, teal); // natija: 3 yoki -1
-
-$font-families: sans-serif, Helvetica, Arial;
-$bg-color: rgb(0,0,0,0.3);
-$border: 2px;
-$border-type: solid;
-
-nav {
-    font-family: $font-families;
-    background-color: $bg-color;
-    border: $border $border-type $bg-color;
-}
-
-
-// Sass da Map technology
-
-// sass map bu - kalit qiymat ko'rinishida element saqlash
-
