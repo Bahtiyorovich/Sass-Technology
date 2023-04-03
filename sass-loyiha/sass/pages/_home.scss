@@ -1,0 +1,40 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+.home {
+    margin: 0;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    
+    &__image {
+        width: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+        img {
+            width: 100%;
+            border-radius: 50%
+        }
+    }
+
+    &__title {
+        margin-top: 20px;
+        font-size: 48px;
+        color: variables.$secondary-text-color;
+        cursor: pointer;
+
+        &:hover {
+            font-size: 56px;
+            @include mixins.transition-ease;
+        }
+    }
+
+    &__description {
+        margin-top: 40px;
+        color: variables.$secondary-text-color;
+    }
+}
